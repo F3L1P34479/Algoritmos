@@ -1,10 +1,6 @@
-
 package exemplogit;
 
-/**
- *
- * @author augus
- */
+
 public class ExemploGit {
 
     /**
