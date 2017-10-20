@@ -1,4 +1,4 @@
-package exemploFuncao;
+package Funcoes;
 
 import java.util.Scanner;
 
