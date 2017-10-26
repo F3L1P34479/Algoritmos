@@ -9,22 +9,42 @@ import java.util.Scanner;
  */
 public class Exercicio06Aula02 {
     
-    public static int informaValor(){
+    public static int[] informaValor(){
         Scanner e = new Scanner(System.in);
-        System.out.print("Informe um valor: ");
-        int valor=e.nextInt();
+        int valor=0;
+        System.out.print("Informe p tamanho do vetor: ");
+        valor=e.nextInt();
         
-        return valor;
+        int []v = new int[valor];
+        
+        for(int i=0;i<v.length;i++){
+            System.out.print("Informe um numero: ");
+            v[i]=e.nextInt();
+        }
+              
+        return v;
     }
     
-    public static int[] encontraMaior(int []m){
+    public static int encontraMaior(int []m){
         
-        return m;
+        for(int i=0;i<m.length;i++){
+            int a = m[i];
+            for(int j=i-1;j>=0&&m[j]>a;j--){
+                m[j+1]=m[j];
+                m[j]=a;
+                
+            }
+        }
+        
+        int maior=m[m.length-1];
+        
+        return maior;
     }
             
             
     public static void main(String[] args) {
-        // TODO code application logic here
+        
+        System.out.println(encontraMaior(informaValor()));
     }
     
 }
