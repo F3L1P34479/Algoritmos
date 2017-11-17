@@ -67,6 +67,18 @@ public class Exercicio01 {
             }
         }
         System.out.println("O maior valor dentro da matriz é: "+maior+" na posição "+lmaior+" "+cmaior);
+        
+        int soma=0;
+        
+        for(int l = 0;l<5;l++){
+            for(int c=0;c<10;c++){
+                
+                soma=soma+m[l][c];
+                               
+            }
+        }
+        System.out.println("A media dos valores da matriz é "+soma/50);
+        
     }
     
 }
