@@ -23,35 +23,44 @@ public class Exercicio01Aula03 {
 
     public static void calculadora(double o) {
 
-        
+        while (o != 0) {
             
-        if (o == 1) {
-            System.out.println("A soma é "+somar(pedirNum1(), pedirNum2()));
-        } 
-
-        else if (o == 2) {
-            System.out.println("A subtração é "+subtrair(pedirNum1(), pedirNum2()));
-        } 
-
-        else if (o == 3) {
-            System.out.println("A multiplicação é "+multiplicar(pedirNum1(), pedirNum2()));
-        } 
-
-        else if (o == 4) {
-            System.out.println("A divisão é "+dividir(pedirNum1(), pedirNum2()));
-        } 
-
-        else if (o == 5) {
-            System.out.println("você esta saindo...");
-        } 
-
-        else {
-            System.out.println("Opção inválida");
+            if (o == 1) {
+                System.out.println("A soma é " + somar(pedirNum1(), pedirNum2()));
+            } 
+            
+            else if (o == 2) {
+                System.out.println("A subtração é " + subtrair(pedirNum1(), pedirNum2()));
+            } 
+            
+            else if (o == 3) {
+                System.out.println("A multiplicação é " + multiplicar(pedirNum1(), pedirNum2()));
+            } 
+            
+            else if (o == 4) {
+                System.out.println("A divisão é " + dividir(pedirNum1(), pedirNum2()));
+            }
+            
+            else if (o == 0) {
+                System.out.println("você esta saindo...");
+            } 
+            
+            else {
+                System.out.println("Opção inválida");
+            }
+            o=pedirNumero();
         }
 
-        
     }
-
+    public static int pedirNumero(){
+        
+        Scanner e = new Scanner(System.in);
+        
+        System.out.print("Informe um número: ");
+        int num=e.nextInt();
+        
+        return num;
+    }
     public static double pedirNum1() {
         Scanner e = new Scanner(System.in);
 
@@ -73,38 +82,36 @@ public class Exercicio01Aula03 {
     public static double somar(double n, double m) {
 
         double s = n + m;
-        
+
         return s;
     }
 
     public static double subtrair(double n, double m) {
 
         double su = n - m;
-        
+
         return su;
     }
 
     public static double multiplicar(double n, double m) {
 
         double mu = n * m;
-        
+
         return mu;
     }
 
     public static double dividir(double n, double m) {
 
         double d = n / m;
-        
+
         return d;
     }
 
     public static void main(String[] args) {
 
         criarMenu();
-        
-        calculadora(pedirNum1());
-        
-        
+
+        calculadora(pedirNumero());
 
     }
 

@@ -18,13 +18,20 @@ public class Exercicio04Ex151Aula02 {
         return n;
     }
 
-    public static void verificaImpar(int n){
+    public static boolean verificaImpar(int n){
         
         
-        
+        boolean r;
+        if(n%2==0){
+            r=true;
+        }
+        else{
+            r=false;
+        }
+        return r;
     }
     public static void main(String[] args) {
-        // TODO code application logic here
+        System.out.println(verificaImpar(pedirNum()));
     }
     
 }
